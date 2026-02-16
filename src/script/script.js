@@ -61,4 +61,35 @@ const displayTrendingProducts = (products) => {
     })
 
 }
-loadAllProducts()
+
+// Load Category Buttons
+const loadCategoryButtons = () => {
+    const url = "https://fakestoreapi.com/products/categories";
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayCategoryButtons(data))
+}
+
+// Display Category Buttons
+const displayCategoryButtons = (buttons) => {
+    // Target Display Location
+    const categoryBtnContainer = document.getElementById("categoryBtnContainer");
+
+    // Loop Through
+    buttons.forEach(button => {
+        // Create Element
+        const btn = document.createElement("div");
+        btn.innerHTML = `
+        <button class="border border-slate-300 px-5 py-2 rounded-full cursor-pointer hover:bg-primary hover:text-white">
+           ${button}
+        </button>
+        `
+        // Append Eement
+        categoryBtnContainer.append(btn);
+    })
+
+}
+
+
+loadAllProducts();
+loadCategoryButtons();
