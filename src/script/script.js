@@ -164,5 +164,29 @@ const removeActive = () => {
   const activeBtn = document.querySelectorAll(".active");
   activeBtn.forEach(btn => btn.classList.remove("active"));
 }
+
+// Hide & Show Section
+const showSections = (clickedBtn, sectionIds) => {
+  // Add Active class
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach(item => {
+    item.classList.remove("active-page");
+  });
+
+  clickedBtn.classList.add("active-page");
+
+  // Hide & show
+  const sections = document.querySelectorAll(".page-section");
+
+  sections.forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  sectionIds.forEach(id => {
+    document.getElementById(id).classList.remove("hidden");
+  });
+};
+
 loadAllProducts();
 loadCategoryButtons();

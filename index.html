@@ -29,10 +29,10 @@
         <!-- MenuItems -->
         <div class="hidden lg:flex">
           <ul class="flex items-center gap-5 text-lg text-accent">
-            <li class="hover:text-primary"><a href="">Home</a></li>
-            <li class="hover:text-primary"><a href="">Products</a></li>
-            <li class="hover:text-primary"><a href="">About</a></li>
-            <li class="hover:text-primary"><a href="">Contact</a></li>
+            <li onclick="showSections(this, ['hero', 'choose', 'trending'])" class="hover:text-primary cursor-pointer nav-item active-page">Home</li>
+            <li onclick="showSections(this, ['all-products'])" class="hover:text-primary cursor-pointer nav-item">Products</li>
+            <li class="hover:text-primary cursor-pointer">About</li>
+            <li class="hover:text-primary cursor-pointer">Contact</li>
           </ul>
         </div>
 
@@ -52,7 +52,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[500px] md:h-[600px] flex items-center">
+    <section id="hero" class="page-section relative h-[500px] md:h-[600px] flex items-center">
 
       <!-- Background Image -->
       <div class="absolute inset-0 bg-[url('/src/Assets/banner-image.png')] 
@@ -78,7 +78,7 @@
   <!-- Main -->
   <main>
     <!-- Why Choose Us Section -->
-    <section class="container mx-auto my-10 lg:my-20 px-3">
+    <section id="choose" class="page-section container mx-auto my-10 lg:my-20 px-3">
       <h2 class="text-3xl font-bold text-center text-secondary">Why Choose Us</h2>
       <p class="text-center mt-4 text-accent">
         We provide the best shopping experience with top-notch services.
@@ -146,7 +146,7 @@
     </section>
 
     <!-- Trending Section -->
-    <section class="container mx-auto my-10 lg:my-20 px-3">
+    <section id="trending" class="page-section container mx-auto my-10 lg:my-20 px-3">
       <h2 class="text-3xl font-bold text-secondary">Trending Now</h2>
       <!-- Product Container -->
       <div id="productContainer" class="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -155,7 +155,7 @@
     </section>
 
     <!-- All Products Section -->
-    <section class="container mx-auto my-10 lg:my-20 px-3">
+    <section id="all-products" class="hidden page-section container mx-auto my-10 lg:my-20 px-3">
       <h2 class="text-3xl text-center font-bold text-secondary">Our Products</h2>
 
       <!-- Category Buttons -->
