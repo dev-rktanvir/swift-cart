@@ -29,8 +29,10 @@
         <!-- MenuItems -->
         <div class="hidden lg:flex">
           <ul class="flex items-center gap-5 text-lg text-accent">
-            <li onclick="showSections(this, ['hero', 'choose', 'trending'])" class="hover:text-primary cursor-pointer nav-item active-page">Home</li>
-            <li onclick="showSections(this, ['all-products'])" class="hover:text-primary cursor-pointer nav-item">Products</li>
+            <li onclick="showSections(this, ['hero', 'choose', 'trending'])"
+              class="hover:text-primary cursor-pointer nav-item active-page">Home</li>
+            <li onclick="showSections(this, ['all-products'])" class="hover:text-primary cursor-pointer nav-item">
+              Products</li>
             <li class="hover:text-primary cursor-pointer">About</li>
             <li class="hover:text-primary cursor-pointer">Contact</li>
           </ul>
@@ -160,7 +162,8 @@
 
       <!-- Category Buttons -->
       <div id="categoryBtnContainer" class="flex items-center justify-center flex-wrap gap-5 my-10">
-        <button id="btn-all" onclick="loadAllProducts()" class="border border-slate-300 px-5 py-2 rounded-full cursor-pointer hover:bg-primary hover:text-white active">
+        <button id="btn-all" onclick="loadAllProducts()"
+          class="border border-slate-300 px-5 py-2 rounded-full cursor-pointer hover:bg-primary hover:text-white active">
           All
         </button>
       </div>
@@ -170,6 +173,23 @@
 
       </div>
     </section>
+
+    <!-- Modal for product details -->
+    
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box  max-w-[90%] lg:max-w-[50%]">
+        <!-- Details Container -->
+         <div id="details-container">
+
+         </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </main>
   <!-- Footer -->
   <footer class="bg-[#0F172A] text-accent">
