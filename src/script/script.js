@@ -6,6 +6,9 @@ const loadAllProducts = () => {
     .then(data => {
       displayTrendingProducts(data)
       displayCategoryProducts(data)
+      removeActive();
+      const allBtn = document.getElementById("btn-all");
+      allBtn.classList.add("active");
     })
 }
 
@@ -98,7 +101,12 @@ const loadCategoryProducts = (category) => {
   const url = `https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`
   fetch(url)
     .then(res => res.json())
-    .then(data => displayCategoryProducts(data))
+    .then(data => {
+      displayCategoryProducts(data)
+      removeActive();
+      const clickedBtn = document.getElementById(`${category}`)
+      clickedBtn.classList.add("active")
+    })
 }
 
 // Display category products
@@ -149,6 +157,12 @@ const displayCategoryProducts = (products) => {
     // Append Element
     categoryProduct.append(div);
   })
+}
+
+// Remove active class
+const removeActive = () => {
+  const activeBtn = document.querySelectorAll(".active");
+  activeBtn.forEach(btn => btn.classList.remove("active"));
 }
 loadAllProducts();
 loadCategoryButtons();
