@@ -6,6 +6,11 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SwiftCart</title>
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
   <!-- Css File -->
   <link rel="stylesheet" href="/src/style/style.css">
 </head>
@@ -13,6 +18,38 @@
 <body class="poppins-font">
   <!-- Header -->
   <header>
+    <!-- Navbar -->
+    <nav class="bg-base-100 shadow-md">
+      <div class="lg:max-w-7xl mx-auto flex items-center justify-between px-3 py-4">
+        <!-- Logo -->
+        <div>
+          <h2 class="text-primary text-2xl font-semibold cursor-pointer">SwiftCart</h2>
+        </div>
+
+        <!-- MenuItems -->
+        <div class="hidden lg:flex">
+          <ul class="flex items-center gap-5 text-lg text-accent">
+            <li class="hover:text-primary"><a href="">Home</a></li>
+            <li class="hover:text-primary"><a href="">Products</a></li>
+            <li class="hover:text-primary"><a href="">About</a></li>
+            <li class="hover:text-primary"><a href="">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex items-center gap-5">
+          <!-- cart icon -->
+          <div class="relative">
+            <i class="fas fa-cart-plus text-2xl cursor-pointer"></i>
+            <span class="badge badge-sm badge-primary absolute -top-3 -right-3">0</span>
+          </div>
+          <!-- Burger icon -->
+          <div class="lg:hidden">
+            <i class="fas fa-bars text-2xl cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
 
   </header>
   <!-- Main -->
