@@ -167,6 +167,12 @@ const removeActive = () => {
 
 // Hide & Show Section
 const showSections = (clickedBtn, sectionIds) => {
+
+  // Close modal if open
+  const modal = document.getElementById("my_modal_3");
+  if (modal.open) {
+    modal.close();
+  }
   // Add Active class
   const navItems = document.querySelectorAll(".nav-item");
 
