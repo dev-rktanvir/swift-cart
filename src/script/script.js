@@ -249,3 +249,8 @@ const displayProductDetails = (product) => {
 
 loadAllProducts();
 loadCategoryButtons();
+
+window.loadProductDetails = loadProductDetails;
+window.loadCategoryProducts = loadCategoryProducts;
+window.loadAllProducts = loadAllProducts;
+window.showSections = showSections;
